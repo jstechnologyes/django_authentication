@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}
+  update register
+{% endblock %}
+
+{% block content %}
+    <br>
+        <div class="container">
+            <div class="col-md-6 offset-md-3">
+                 <h2 class="text-center">Update your Account</h2>
+                 <hr>
+                <br>
+                   <form method="POST" action="{% url 'edit_register' %}">
+                       {% csrf_token %}
+                       {{ form.as_p }}
+                       <input type="submit" value="Edit Profile" class="btn btn-primary">
+
+            </form>
+            </div>
+        </div>
+
+
+{% endblock %}
